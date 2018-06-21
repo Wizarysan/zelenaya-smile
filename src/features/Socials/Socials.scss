@@ -1,0 +1,23 @@
+@import './../../styles/shared.scss';
+
+.socials {
+  position: fixed;
+  right: 25px;
+  bottom: 5%;
+  z-index: 1;
+  @include breakpoint(xs) {
+    display: none;
+  }
+  &__link {
+    display: block;
+    padding-bottom: 5px;
+  }
+  .icon {
+    fill: $br-green;
+    width: 20px;
+    transition: fill .2s ease-out;
+    &:hover {
+      fill: $dark-green;
+    }
+  }
+}

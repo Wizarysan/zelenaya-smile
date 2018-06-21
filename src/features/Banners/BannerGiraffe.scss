@@ -1,0 +1,238 @@
+@import './../../styles/shared.scss';
+
+.giraffe {
+  @include breakpoint(xs) {
+    display: none;
+  }
+  &__wrapper {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  &__title {
+    display: inline-block;
+    font-size: 25px;
+    padding: 70px 0 70px 30px;
+    &-big {
+      transition: all .3s ease-out;
+      font-family: 'unisans_hc', Arial;
+      font-size:61px;
+      line-height: 0.8;
+      color: $br-green;
+      margin-left: -5px;
+    }
+  }
+  &__body {
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__options {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 65px;
+    font-size: 16px;
+    margin-left: 15px;
+    &-divider {
+      display: none;
+    }
+  }
+  &__option {
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    &-img {
+      margin-bottom: 10px;
+    }
+  }
+  &__head {
+    position: absolute;
+    right: 7%;
+    top: -30px;
+    transition: all .6s ease-out;
+  }
+  &:hover {
+    .giraffe__head {
+      top:-10px;
+      transform: rotate(5deg);
+    }
+    .giraffe__title-big {
+      color: #88cd40;
+    }
+    .giraffe__whole {
+      transform: rotate(5deg);
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .giraffe__body {
+    margin-left: -52px;
+  }
+  .giraffe__options {
+    padding-top: 65px;
+    margin-left: -40px;
+  }
+}
+
+@media screen and (max-width: 1155px) {
+  .giraffe__options {
+    padding-top: 15px;
+    font-size: 15px;
+    margin-left: 50px;
+    &-divider {
+      display: block;
+    }
+  }
+  .giraffe__option {
+    line-height: 1.0;
+    &-img {
+      width: 57px;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .giraffe__options {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .giraffe__options {
+    margin-left: -20px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .giraffe__body {
+    display: none;
+  }
+  .giraffe__head {
+    position: relative;
+    right:0;
+    margin-left:5px;
+    vertical-align: top;
+  }
+  .giraffe__options {
+    margin-left: 15px;
+  }
+}
+
+.giraffe-v {
+  .giraffe {
+    background: #f0f0f0;
+    &__wrapper {
+      height: 100vh;
+    }
+    &__title {
+      padding:30px 0 0 0;
+      display: block;
+      text-align: center;
+      font-size: 1.7vw;
+      &-big {
+        font-size: 2.4vw;
+        line-height: 1.1;
+      }
+    }
+    &__whole{
+      padding: 30px 14% 0 0;
+      position:absolute;
+      left: -40px;
+      bottom: 0;
+      transition: all 1s;
+      &-img {
+        max-height: 73vh;
+      }
+    }
+    &__options {
+      font-size: 13px;
+      position: absolute;
+      right: 10%;
+      bottom: 100px;
+      margin-left: 0;
+      &-divider {
+        display: block;
+      }
+    }
+    &__option {
+      margin-left: 18px;
+      &-img {
+        width: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1430px) {
+  .giraffe-v {
+    .giraffe__whole {
+      left: -70px;
+    }
+  }
+}
+@media screen and (max-width: 1315px) {
+  .giraffe-v {
+    .giraffe__option {
+      margin-left: 10px;
+    }
+    .giraffe__options {
+      font-size: 12px;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .giraffe-v {
+    .giraffe__option {
+      &-img {
+        width: 45px;
+      }
+    }
+    .giraffe__options {
+      right:7%;
+    }
+    .giraffe__title {
+      padding:40px 0 0 0;
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  .giraffe-v {
+    .giraffe__whole {
+      left: -90px;
+    }
+  }
+}
+@media screen and (max-width: 1010px) {
+  .giraffe-v {
+    .giraffe__whole {
+      left: -90px;
+    }
+  }
+}
+@media screen and (max-width: 954px) {
+  .giraffe-v {
+    .giraffe__whole {
+      bottom: -52%;
+      left: -80px;
+    }
+    .giraffe__title{
+      padding: 15px 0 0 0;
+    }
+    .giraffe__options {
+      font-size: 13px;
+      bottom: 140px;
+    }
+    .giraffe__option {
+      padding: 0 5px;
+      &-img {
+        width: 40px;
+      }
+      &-br {
+        display:none;
+      }
+    }
+  }
+}

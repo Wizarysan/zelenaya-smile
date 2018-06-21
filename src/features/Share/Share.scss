@@ -1,0 +1,28 @@
+@import './../../styles/shared.scss';
+
+.share {
+  padding-top: 5px;
+  padding-bottom: 30px;
+  &__button {
+    display: inline-block;
+    margin-right: 5px;
+    outline: none;
+    transition: all .3s;
+    div {
+      display: inline-block;
+    }
+    &:hover {
+      filter: brightness(120%);
+    }
+  }
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__count {
+    display: inline-block;
+    padding-right: 5px;
+    vertical-align: middle;
+    color: white;
+  }
+}

@@ -1,0 +1,181 @@
+@import './../../styles/shared.scss';
+
+.map {
+  position: relative;
+  top: -100px;
+  @include breakpoint(xs) {
+    top:0;
+    overflow-x: hidden;
+  }
+  &__wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1000px;
+    .map_icon {
+      width: 54px;
+      fill: $br-green;
+      display: block;
+      margin: 60px auto;
+    }
+    .map__list {
+      background-image: none;
+    }
+  }
+  &__list {
+    z-index: 1;
+    position: relative;
+    &-ul {
+      font-size: 18px;
+      list-style: none;
+      @include breakpoint(xs) {
+        font-size: 23px;
+        line-height: 1.9;
+        margin: 0;
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+    &-item {
+      padding: 5px 10px;
+      cursor: pointer;
+      @include breakpoint(xs) {
+        padding: 5px 0;
+      }
+      &:hover {
+        background-color: $br-green;
+        color:white;
+        a {
+          color:white;
+          text-decoration: none;
+        }
+        .map__list-qty {
+          display: inline;
+        }
+      }
+      &.active {
+        background-color: $br-green;
+        color:white;
+        a {
+          color:white;
+          text-decoration: none;
+        }
+        .map__list-qty {
+          display: inline;
+        }
+      }
+      &.inactive {
+        color: $grey-text;
+        background-color: transparent;
+      }
+    }
+    &-title {
+      font-size: 44px;
+      line-height: 1.2;
+      text-align: center;
+    }
+    &-name {
+      text-decoration: underline;
+    }
+    &-qty {
+      display: none;
+      float: right;
+      padding-right: 5px;
+    }
+  }
+  &__body {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1000px;
+    @include breakpoint(xs) {
+      margin-bottom: 50px;
+    }    
+    &__image {
+      width: 100%;
+    }
+    &__caption {
+      text-transform: uppercase;
+      font-weight: bold;
+      position: absolute;
+      white-space: nowrap;
+      top: 25%;
+      color: rgba(0,0,0,0.18);
+      text-shadow: -44px 36px 0px rgba(247, 247, 247, 1);
+      @include breakpoint(xs) {
+        font-size: 7vw;
+        text-shadow: none;
+      }
+      @include breakpoint(sm) {
+        font-size: 60px;
+      }
+      @include breakpoint(md) {
+        font-size: 80px;
+      }
+    }
+    &__pin {
+      position: absolute;
+      @include breakpoint(xs) {
+        display: none;
+      }
+      .icon_pin {
+        fill: black;
+        transition: fill .2s;
+      }
+      &:hover {
+        z-index: 99;
+        .icon_pin {
+          fill: $br-green;
+        }
+      }
+      &.active {
+        z-index: 99;
+        .icon_pin {
+          fill: $br-green;
+        }
+      }
+      &#pin-stavropol {
+        bottom: 14%;
+        left: 2%;
+      }
+      &#pin-lipetsk {
+        bottom: 33%;
+        left: 8%;
+      }
+      &#pin-belgorod {
+        bottom: 30%;
+        left: 4%;
+      }
+      &#pin-tambov {
+        bottom: 34%;
+        left: 13%;
+      }
+      &#pin-beloretsk {
+        bottom: 21%;
+        left: 13%;
+      }
+      &#pin-nevinka {
+        bottom: 12%;
+        left: 4%;
+      }
+      &#pin-tomsk {
+        bottom: 12%;
+        left: 44%;
+      }
+      &#pin-vladivostok {
+        bottom: 6%;
+        left: 86%;
+      }
+      &#pin-ufa {
+        bottom: 22%;
+        left: 10%;
+      }
+      &#pin-elets {
+        bottom: 35%;
+        left: 6%;
+      }
+      &#pin-elista {
+        bottom: 15%;
+        left: 6%;
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+@import './../styles/bootstrap.scss';
+@import './../styles/shared.scss';
+
+html, body {
+  font-size: 18px;
+  font-family: 'pf_beausans_pro_reg', Arial;
+}
+
+a {
+  color: black;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.row {
+  margin: 0;
+}
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+}
+
+//Helpers
+
+.no-pad {
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-both {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.green-text {
+  color: $br-green;
+}
+
+//Fonts
+@font-face {
+  font-family: 'pf_beausans_pro_light';
+  src: url('../assets/fonts/PFSquareSansPro-Light.woff') format('woff'),
+       url('../assets/fonts/PFSquareSansPro-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'pf_beausans_pro_reg';
+  src: url('../assets/fonts/PFSquareSansPro-Regular.woff') format('woff'),
+       url('../assets/fonts/PFSquareSansPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'unisans_hc';
+  src: url('../assets/fonts/UniSansHC.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//Icons
+
+#icon_burger {
+  width: 30px;
+  fill: $br-green;
+}
+
+.arrow_right {
+  width: 25px;
+  margin-left: 10px;
+  vertical-align: middle;
+  transition: all .3s;
+}
+
+.arrow_left {
+  width: 25px;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: all .3s;
+}
+
+.arrow_circle {
+  transform: rotate(0deg);
+  transition: all .3s ease-out;
+  fill: white;
+  width: 120px;
+  height:120px;
+}
+
+//Backgrounds
+.back-grey {
+  background-color: #f7f7f7;
+}
+
+.back-greygrad {
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(240,240,240,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f0',GradientType=0 );
+}
+
+//Shadows
+.photoshadow-grey {
+  box-shadow:
+    3px 3px 0 0px hsl(0, 0%, 100%),
+    3px 3px 0 1px hsl(214, 58%, 80%),
+    6px 6px 0 0px hsl(0, 0%, 100%),
+    6px 6px 0 1px hsl(214, 58%, 80%),
+    9px 9px 0 0px hsl(0, 0%, 100%),
+    9px 9px 0 1px hsl(214, 58%, 80%);
+  &:hover {
+    box-shadow:
+      3px 3px 0 0px hsl(0, 0%, 100%),
+      3px 3px 0 1px hsl(99, 46%, 52%),
+      6px 6px 0 0px hsl(0, 0%, 100%),
+      6px 6px 0 1px hsl(99, 46%, 52%),
+      9px 9px 0 0px hsl(0, 0%, 100%),
+      9px 9px 0 1px hsl(99, 46%, 52%);
+  }
+}

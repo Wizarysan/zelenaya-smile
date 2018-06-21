@@ -1,0 +1,29 @@
+@import './../../styles/shared.scss';
+
+.footer {
+  &__copyright {
+    text-align: center;
+    padding: 30px 0;
+  }
+  &__mobile {
+    padding-bottom: 10px;
+    @include breakpoint(sm) {
+      display: none;
+    }
+    .socials {
+      display:block;
+      position: relative;
+      text-align: right;
+      padding-top: 5px;
+      right: 0;
+      .icon {
+        height: 18px;
+      }
+      &__link {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 10px;
+      }
+    }
+  }
+}

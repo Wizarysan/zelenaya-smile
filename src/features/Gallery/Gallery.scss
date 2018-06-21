@@ -1,0 +1,142 @@
+@import './../../styles/shared.scss';
+
+// @keyframes galleryThumb {
+//     from {
+//       opacity: 0;
+//       transform: translateX(15%);
+//     }
+//     to {
+//       opacity: 1;
+//       transform: translateX(0%);
+//     }
+// }
+
+.gallery{
+  margin-top: 30px;
+  &__title {
+    font-size: 2.6em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    @include breakpoint(xs) {
+      font-size: 1.5em;
+    }
+  }
+  &__date {
+    font-size: 1.5em;
+  }
+  &__share {
+    margin-top: 20px;
+    font-size: 1.7em;
+    color: white;
+    height: 110px;
+    &-block {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &-line {
+      display: inline-block;
+      padding: 20px 10px;
+      @include breakpoint(xs) {
+        &:first-of-type {
+          display: none;
+        }
+        &:last-of-type {
+          display: none;
+        }
+      }
+    }
+    .share {
+      font-size: 1em;
+      &__button {
+        @include breakpoint(xs) {
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+        @include breakpoint(sm) {
+          margin-right: 5px;
+          margin-left: 5px;
+        }
+      }
+      .SocialMediaShareButton {
+        border-radius: 100%;
+        background-color: white !important;
+      }
+      .SocialMediaShareCount {
+        display: none;
+      }
+      .social-icon {
+        & rect {
+          fill: transparent;
+        }
+      }
+      .social-icon--vk path {
+        fill: #45668e;
+      }
+      .social-icon--facebook path {
+        fill: #3b5998;
+      }
+      .social-icon--ok path {
+        fill:#f2720c;
+      }
+      .social-icon--twitter path {
+        fill:#00aced;
+      }
+    }
+  }
+  &__nav {
+    font-size: 1.2rem;
+    margin-top:30px;
+    &__backlink {
+      white-space: nowrap;
+      &:hover {
+        .gallery__back {
+          text-decoration: underline;
+        }
+        .arrow_left {
+          transform: translateX(-5px);
+        }
+      }
+      &.bottom {
+        padding-bottom: 30px;
+      }
+    }
+    .arrow_left {
+      fill: $br-green;
+    }
+  }
+  &__back {
+    color: $br-green;
+    vertical-align: middle;
+  }
+  &__count {
+    white-space: nowrap;
+  }
+
+  &__body {
+    clear: both;
+    padding: 40px 10px;
+    text-align: center;
+    @include breakpoint(xs) {
+      text-align: center;
+    }
+    &__thumb {
+      display: inline-block;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 10px;
+      // animation: galleryThumb forwards;
+      // animation-duration: .5s;
+      transition: all .3s;
+      &-img {
+        width:100%;
+      }
+      @include breakpoint(xs) {
+        width: 45%;
+      }
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+  }
+}

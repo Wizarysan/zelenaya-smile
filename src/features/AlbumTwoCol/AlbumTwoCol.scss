@@ -1,0 +1,72 @@
+@import './../../styles/shared.scss';
+
+.album_2col {
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 100px;
+  @include breakpoint(xs) {
+    margin-top: 50px;
+  }
+  &__column {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 3%;
+    padding-right: 3%;
+    @include breakpoint(xs) {
+      width:100%;
+    }
+    &.shifted {
+      margin-top: -40px;
+      @include breakpoint(xs) {
+        margin-top: 0;
+      }
+    }
+  }
+  .column-left {
+    .gallery_cover__icon {
+      top: 32%;
+      left: -48px;
+    }
+  }
+  .column-right {
+    .gallery_cover__icon {
+      top: 32%;
+      right: -48px;
+    }
+  }
+  &__wrap {
+    position: relative;
+    padding-bottom: 50px;
+    .more {
+      text-align: center;
+      position: relative;
+      height: 180px;
+      &:hover {
+        .arrow_circle {
+          transform: rotate(180deg);
+        }
+      }
+      &__circle {
+        background-color: $br-green;
+        padding: 25px;
+        border-radius: 100%;
+        display: inline-block;
+        z-index: 1;
+      }
+      &__albums {
+        color: white;
+      }
+      &__city {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 5vw;
+        z-index: 2;
+        color: rgba(0, 0, 0, 0.08);
+        @include breakpoint(xs) {
+          font-size: 12vw;
+        }
+      }
+    }
+  }
+}

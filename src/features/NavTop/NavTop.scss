@@ -1,0 +1,82 @@
+@import './../../styles/shared.scss';
+
+.nav_top {
+  &__bottom {
+    padding: 65px 60px 0 60px;
+    max-width: 1600px;
+    margin: 0 auto;
+    @include breakpoint(xs) {
+      padding: 30px 60px 0 60px;
+    }
+  }
+  &__dropdown {
+    max-height: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, #253542, #0e212e);
+    color: white;
+    transition: all .4s cubic-bezier(0,1,0,1);
+    &.active {
+      max-height: 1000px;
+      transition: all .5s ease-in;
+    }
+    a {
+      color: white;
+    }
+    .map__list {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 0 40px 0;
+      background: url('../../assets/images/cities_back.png') no-repeat center;
+      background-size: contain;
+    }
+    .map__list-title {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  &__logo_main {
+    display: block;
+    position: relative;
+    background: white;
+    z-index: 1;
+    transition: all .2s;
+    @include breakpoint(sm) {
+      max-width: 220px;
+    }
+    @include breakpoint(xs) {
+      margin: 0 auto;
+      max-width: 200px;
+    }
+  }
+  &__tooltip {
+    &:hover {
+      .logo_main {
+        opacity: 0;
+      }
+      .nav_top__tooltip-text {
+        opacity:1;
+      }
+    }
+    &-text {
+      left: 10%;
+      opacity: 0;
+      transition: all .3s;
+    }
+  }
+  & .logo_smile {
+    padding-left:20px;
+    padding-right:20px;
+    max-width: 310px;
+    transition: all .5s ;
+    &:hover {
+      fill: #72bd44 !important;
+    }
+    @include breakpoint(xs) {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      width:100%;
+      padding-left:0;
+      padding-right:0;
+    }
+  }
+}

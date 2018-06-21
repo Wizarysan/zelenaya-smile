@@ -1,0 +1,80 @@
+//Colors
+
+$br-green: #73bd4c;
+$dark-green: #569635;
+$grey-text: #b3b3b3;
+
+//Responsive
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: 768px) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: 992px) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-hide {
+    display: none;
+  }
+  .mobile-show {
+    display: initial;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-hide {
+    display: initial;
+  }
+  .mobile-show {
+    display: none;
+  }
+}
+
+//Animations
+.animation__photo {
+  &-enter {
+    filter: blur(2px) grayscale(100%);
+  }
+  &-enter-active.animation__photo-enter {
+    filter: blur(0px) grayscale(0%);
+    transition: all 200ms ease-in;
+  }
+  &-leave {
+    opacity: 1;
+    &-active.animation__photo-leave {
+      opacity: 0.01;
+      transition: opacity 200ms ease-in;
+    }
+  }
+}
+
+@keyframes bump {
+		0% {
+				transform: scale(1);
+		}
+		50% {
+				transform: scale(1.6);
+		}
+		100% {
+				transform: scale(1);
+		}
+}
+
+.animation__bump {
+		animation: bump .5s ease-out;
+}

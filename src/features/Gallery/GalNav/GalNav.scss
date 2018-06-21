@@ -1,0 +1,157 @@
+@import './../../../styles/shared.scss';
+
+.gal_nav {
+  padding-top: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  @include breakpoint(xs) {
+    padding: 15px 0;
+    overflow-x: hidden;
+  }
+  &__back {
+    font-size: 1.2rem;
+    padding-top: 10px;
+    display: inline-block;
+    white-space: nowrap;
+    &:hover {
+      .gallery__back {
+        text-decoration: underline;
+      }
+      .arrow_left {
+        transform: translateX(-5px);
+      }
+    }
+  }
+  &__equal {
+    display: flex;
+  }
+  .arrow_left, .arrow_right, .close_icon {
+    fill: $br-green;
+  }
+  &__counter {
+    color: $grey-text;
+    line-height: 2.2;
+    font-size: 20px;
+    float: right;
+  }
+  &__title {
+    display: inline-block;
+    font-size: 28px;
+    padding-bottom: 10px;
+    @include breakpoint(xs) {
+      font-size: 1.3em;
+      padding-bottom: 0;
+    }
+  }
+  &__esc {
+    font-size: 25px;
+    padding-right: 15px;
+    vertical-align: middle;
+  }
+  &__close {
+    display: inline-block;
+    .close_icon {
+      width: 30px;
+      vertical-align: middle;
+    }
+  }
+  &__secondary {
+    padding: 0 20px;
+  }
+  &__share {
+    padding-top: 10px;
+    @include breakpoint(xs) {
+      padding-top: 0px;
+    }
+    &__text {
+      color: $grey-text;
+    }
+  }
+  &__arrow {
+    width: 100%;
+    height: 100%;
+    display: block;
+    .arrow_left, .arrow_right {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      @include breakpoint(xs) {
+        top: 0;
+        transform: translate(-50%);
+        width: 30px;
+      }
+    }
+    .arrow_left {
+      @include breakpoint(xs) {
+        left: initial;
+        right: -45px;
+      }
+    }
+    .arrow_right {
+      @include breakpoint(xs) {
+        left: -15px;
+      }
+    }
+    &:hover {
+      .arrow_left, .arrow_right {
+        fill: #59953a;
+      }
+    }
+  }
+  //For big touch zones
+  &__left {
+    @include breakpoint(xs) {
+      width: 170%;
+    }
+  }
+  &__right {
+    @include breakpoint(xs) {
+      width: 170%;
+      margin-left: -50%;
+    }
+  }
+  &__photo {
+    height: 70vh;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+    @include breakpoint(xs) {
+      margin-top: 40px;
+    }
+    &__image {
+      max-width: 100%;
+      max-height: 70vh;
+      margin:auto;
+      @include breakpoint(xs) {
+        top: 0;
+        transform: translate(-50%);
+      }
+    }
+  }
+}
+
+.no-nav {
+  .single-hidden {
+    display: none;
+  }
+  .single-full {
+    width: 100%;
+    max-width: 100%;
+  }
+  .gal_nav {
+    background: black;
+    padding: 0;
+  }
+  .gal_nav__photo {
+    height: 100vh;
+    padding: 0 5px;
+    margin-top:0;
+    cursor: -webkit-zoom-out;
+    cursor: zoom-out;
+  }
+  .gal_nav__photo__image {
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-height: 93vh;
+  }
+}
