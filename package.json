@@ -12,7 +12,8 @@
     "react-share": "^1.15.1",
     "react-swipeable": "^4.1.0",
     "react-transition-group": "^1.2.0",
-    "scroll-to-element": "^2.0.0"
+    "scroll-to-element": "^2.0.0",
+    "scrollreveal": "^3.4.0"
   },
   "devDependencies": {
     "node-sass": "^4.5.2",
