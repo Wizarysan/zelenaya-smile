@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 
-import GalNav from './../features/Gallery/GalNav/GalNav'
-import GalImage from './../features/Gallery/GalImage/GalImage'
-import BannerGiraffeVertical from './../features/Banners/BannerGiraffeVertical'
+import GalNav from './../components/Gallery/GalNav/GalNav'
+import GalImage from './../components/Gallery/GalImage/GalImage'
+import BannerGiraffeVertical from './../components/Banners/BannerGiraffeVertical'
 
 class ImagePage extends React.Component {
 

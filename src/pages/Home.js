@@ -1,13 +1,12 @@
-import React, {PropTypes} from 'react';
-import {Link} from 'react-router';
+import React from 'react';
 import {connect} from 'react-redux';
 
-import BannerGiraffe from './../features/Banners/BannerGiraffe'
-import NavTop from './../features/NavTop/NavTop'
-import Socials from './../features/Socials/Socials'
-import AlbumTwoCol from './../features/AlbumTwoCol/AlbumTwoCol'
-import CityMap from './../features/CityMap/CityMap'
-import Footer from './../features/Footer/Footer'
+import BannerGiraffe from './../components/Banners/BannerGiraffe'
+import NavTop from './../components/NavTop/NavTop'
+import Socials from './../components/Socials/Socials'
+import AlbumTwoCol from './../components/AlbumTwoCol/AlbumTwoCol'
+import CityMap from './../components/CityMap/CityMap'
+import Footer from './../components/Footer/Footer'
 
 import {cityGWName} from './../utils/helpers';
 

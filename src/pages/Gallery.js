@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 
-import NavTop from './../features/NavTop/NavTop'
-import Socials from './../features/Socials/Socials'
-import Gallery from './../features/Gallery/Gallery'
+import NavTop from './../components/NavTop/NavTop'
+import Socials from './../components/Socials/Socials'
+import Gallery from './../components/Gallery/Gallery'
 
 class GalleryPage extends React.Component {
 

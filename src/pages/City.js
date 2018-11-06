@@ -2,11 +2,11 @@ import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 import banner_top from './../assets/images/banner_top.jpg';
 
-import NavTop from './../features/NavTop/NavTop'
-import Socials from './../features/Socials/Socials'
-import AlbumCity from './../features/AlbumCity/AlbumCity'
-import CityMap from './../features/CityMap/CityMap'
-import Footer from './../features/Footer/Footer'
+import NavTop from './../components/NavTop/NavTop'
+import Socials from './../components/Socials/Socials'
+import AlbumCity from './../components/AlbumCity/AlbumCity'
+import CityMap from './../components/CityMap/CityMap'
+import Footer from './../components/Footer/Footer'
 
 class CityPage extends React.Component {
   render() {
