@@ -4,15 +4,16 @@
   "private": true,
   "homepage": "",
   "dependencies": {
-    "react": "^15.4.2",
+    "enzyme": "^3.7.0",
+    "react": "^16.6.1",
     "react-delay": "0.0.4",
-    "react-dom": "^15.4.2",
+    "react-dom": "^16.6.1",
     "react-helmet": "^5.2.0",
     "react-jss": "^5.4.0",
     "react-share": "^1.15.1",
     "react-swipeable": "^4.1.0",
     "react-transition-group": "^1.2.0",
-    "scroll-to-element": "^2.0.0",
+    "scroll-to-element": "^2.0.2",
     "scrollreveal": "^3.4.0"
   },
   "devDependencies": {
@@ -50,7 +51,7 @@
     "postcss-loader": "1.2.2",
     "promise": "7.1.1",
     "react-dev-utils": "^0.5.2",
-    "react-redux": "^5.0.3",
+    "react-redux": "^5.1.0",
     "react-router": "^3.0.2",
     "redux": "^3.6.0",
     "redux-immutable-state-invariant": "^2.0.0",
@@ -64,7 +65,7 @@
     "whatwg-fetch": "2.0.2"
   },
   "scripts": {
-    "build-css": "node-sass src/ -o src/",    
+    "build-css": "node-sass src/ -o src/",
     "start-js": "node scripts/start.js",
     "start": "set PORT=3006 && npm-run-all -p start-js",
     "build": "npm run build-css && node scripts/build.js",

@@ -29,7 +29,7 @@ class AlbumCity extends React.Component {
       //window.scrollBy(0,1);
     }
 
-    //TODO переписать в универсальный cut?
+    //TODO rewrite tu universal cut?
     document.querySelector('.js-album-rest').addEventListener('click', revealRestAlbum);
 
     var ticking = false;
@@ -54,7 +54,7 @@ class AlbumCity extends React.Component {
 
   render() {
     window.scrollTo(0, 0);
-    //TODO перенести в локальный стейт а инициализацию в cdm
+    //TODO move to local state with cdm init?
     let albums = this.props.galMap[this.props.city].map((album, index) => {
       return (
         <div className="album_flex__item" key={index}>
@@ -89,11 +89,6 @@ function mapStateToProps(state, ownProps) {
     city: state.city,
     galMap: state.galMap
   };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-  }
 }
 
 export default connect(mapStateToProps)(AlbumCity);
