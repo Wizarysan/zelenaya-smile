@@ -25,11 +25,11 @@ class Gallery extends React.Component {
 
 //TODO ПОЧТИ одинаковый функционал с GalNav - рефактор
   getGalleryTitle() {
-    return this.props.galMap[this.props.currentCity].find(item=>item.id==this.props.id).name
+    return this.props.galMap.body[this.props.currentCity].find(item=>item.id==this.props.id).name
   }
   //TODO слить в одну функцию получения из галереи чего угодно?
   getGalleryDate() {
-    return this.props.galMap[this.props.currentCity].find(item=>item.id==this.props.id).date
+    return this.props.galMap.body[this.props.currentCity].find(item=>item.id==this.props.id).date
   }
 
   componentWillMount() {

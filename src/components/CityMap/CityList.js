@@ -34,7 +34,7 @@ class CityList extends React.Component {
                   this.handleCityChange('Белгород');
                   handleDropdownToggle('city-dropdown', 'close');
                 }}>
-                <span className="map__list-name">Белгород</span> <span className="map__list-qty">{this.props.galMap['Белгород'].length}</span>
+                <span className="map__list-name">Белгород</span> <span className="map__list-qty">{this.props.galMap.body['Белгород'].length}</span>
                 </li>
               </Link>
               <li className="map__list-item inactive">Ефремов <span className="map__list-qty"></span></li>
@@ -45,7 +45,7 @@ class CityList extends React.Component {
                     this.handleCityChange('Тамбов');
                     handleDropdownToggle('city-dropdown', 'close');
                   }}>
-                  <span className="map__list-name">Тамбов</span> <span className="map__list-qty">{this.props.galMap['Тамбов'].length}</span>
+                  <span className="map__list-name">Тамбов</span> <span className="map__list-qty">{this.props.galMap.body['Тамбов'].length}</span>
                   </li>
                 </Link>
             </ul>
@@ -58,7 +58,7 @@ class CityList extends React.Component {
                   this.handleCityChange('Белорецк');
                   handleDropdownToggle('city-dropdown', 'close');
                 }}>
-                <span className="map__list-name">Белорецк</span> <span className="map__list-qty">{this.props.galMap['Белорецк'].length}</span>
+                <span className="map__list-name">Белорецк</span> <span className="map__list-qty">{this.props.galMap.body['Белорецк'].length}</span>
                 </li>
               </Link>
               <Link to={(this.props.type === 'top') ? '' : '/city/Кочубеевское'}>
@@ -67,7 +67,7 @@ class CityList extends React.Component {
                   this.handleCityChange('Кочубеевское');
                   handleDropdownToggle('city-dropdown', 'close');
                 }}>
-                <span className="map__list-name">Кочубеевское</span> <span className="map__list-qty">{this.props.galMap['Кочубеевское'].length}</span>
+                <span className="map__list-name">Кочубеевское</span> <span className="map__list-qty">{this.props.galMap.body['Кочубеевское'].length}</span>
                 </li>
               </Link>
               <Link to={(this.props.type === 'top') ? '' : '/city/Невинномысск'}>
@@ -76,7 +76,7 @@ class CityList extends React.Component {
                   this.handleCityChange('Невинномысск');
                   handleDropdownToggle('city-dropdown', 'close');
                 }}>
-                <span className="map__list-name">Невинномысск</span> <span className="map__list-qty">{this.props.galMap['Невинномысск'].length}</span>
+                <span className="map__list-name">Невинномысск</span> <span className="map__list-qty">{this.props.galMap.body['Невинномысск'].length}</span>
                 </li>
               </Link>
               <Link to={(this.props.type === 'top') ? '' : '/city/Томск'}>
@@ -85,7 +85,7 @@ class CityList extends React.Component {
                   this.handleCityChange('Томск');
                   handleDropdownToggle('city-dropdown', 'close');
                 }}>
-                <span className="map__list-name">Томск</span> <span className="map__list-qty">{this.props.galMap['Томск'].length}</span>
+                <span className="map__list-name">Томск</span> <span className="map__list-qty">{this.props.galMap.body['Томск'].length}</span>
                 </li>
               </Link>
             </ul>
@@ -98,7 +98,7 @@ class CityList extends React.Component {
                   this.handleCityChange('Владивосток');
                   handleDropdownToggle('city-dropdown', 'close');
                 }}>
-                <span className="map__list-name">Владивосток</span> <span className="map__list-qty">{this.props.galMap['Владивосток'].length}</span>
+                <span className="map__list-name">Владивосток</span> <span className="map__list-qty">{this.props.galMap.body['Владивосток'].length}</span>
                 </li>
               </Link>
               <Link to={(this.props.type === 'top') ? '' : '/city/Липецк'}>
@@ -107,7 +107,7 @@ class CityList extends React.Component {
                   this.handleCityChange('Липецк');
                   handleDropdownToggle('city-dropdown', 'close');
                 }}>
-                <span className="map__list-name">Липецк</span> <span className="map__list-qty">{this.props.galMap['Липецк'].length}</span>
+                <span className="map__list-name">Липецк</span> <span className="map__list-qty">{this.props.galMap.body['Липецк'].length}</span>
                 </li>
               </Link>
               <li className="map__list-item inactive">Нефтекамск <span className="map__list-qty"></span></li>
@@ -117,7 +117,7 @@ class CityList extends React.Component {
                   this.handleCityChange('Уфа');
                   handleDropdownToggle('city-dropdown', 'close');
                 }}>
-                <span className="map__list-name">Уфа</span> <span className="map__list-qty">{this.props.galMap['Уфа'].length}</span>
+                <span className="map__list-name">Уфа</span> <span className="map__list-qty">{this.props.galMap.body['Уфа'].length}</span>
                 </li>
               </Link>
             </ul>
@@ -130,7 +130,7 @@ class CityList extends React.Component {
                   this.handleCityChange('Елец');
                   handleDropdownToggle('city-dropdown', 'close');
                 }}>
-                <span className="map__list-name">Елец</span> <span className="map__list-qty">{this.props.galMap['Елец'].length}</span>
+                <span className="map__list-name">Елец</span> <span className="map__list-qty">{this.props.galMap.body['Елец'].length}</span>
                 </li>
               </Link>
               <li className="map__list-item inactive">Москва <span className="map__list-qty"></span></li>
@@ -140,7 +140,7 @@ class CityList extends React.Component {
                   this.handleCityChange('Ставрополь');
                   handleDropdownToggle('city-dropdown', 'close');
                 }}>
-                <span className="map__list-name">Ставрополь</span> <span className="map__list-qty">{this.props.galMap['Ставрополь'].length}</span>
+                <span className="map__list-name">Ставрополь</span> <span className="map__list-qty">{this.props.galMap.body['Ставрополь'].length}</span>
                 </li>
               </Link>
               <Link to={(this.props.type === 'top') ? '' : '/city/Элиста'}>
@@ -149,7 +149,7 @@ class CityList extends React.Component {
                   this.handleCityChange('Элиста');
                   handleDropdownToggle('city-dropdown', 'close');
                 }}>
-                <span className="map__list-name">Элиста</span> <span className="map__list-qty">{this.props.galMap['Элиста'].length}</span>
+                <span className="map__list-name">Элиста</span> <span className="map__list-qty">{this.props.galMap.body['Элиста'].length}</span>
                 </li>
               </Link>
             </ul>

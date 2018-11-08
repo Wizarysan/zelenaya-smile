@@ -30,7 +30,7 @@ class GalNav extends React.Component {
   }
 
   getGalleryTitle() {
-    return this.props.galMap[this.props.currentCity].find(item=>item.id==this.props.galleryId).name;
+    return this.props.galMap.body[this.props.currentCity].find(item=>item.id==this.props.galleryId).name;
   }
 
   componentWillMount() {

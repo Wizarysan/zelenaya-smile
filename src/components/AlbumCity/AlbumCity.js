@@ -1,8 +1,9 @@
 import React from 'react';
 import ScrollReveal from 'scrollreveal';
 import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
 //Borrowed action to reduce duplicate code
-import {setCity} from './../CitySwitch/CityDuck';
+import * as cityActions from './../CitySwitch/CityDuck';
 
 import './AlbumCity.scss';
 import ArrowCircle from './../../assets/svg/Arrow_circle';
@@ -15,7 +16,7 @@ export class AlbumCity extends React.Component {
 
   componentWillMount() {
     if (this.props.city != this.props.targetCity) {
-      this.props.dispatch(setCity(this.props.targetCity));
+      this.props.actions.setCity(this.props.targetCity);
     }
   }
 
@@ -26,7 +27,6 @@ export class AlbumCity extends React.Component {
     function revealRestAlbum() {
       document.querySelector('.album_flex__rest-album').classList.add('active');
       document.querySelector('.js-album-rest').classList.add('hidden');
-      //window.scrollBy(0,1);
     }
 
     //TODO rewrite tu universal cut?
@@ -55,7 +55,8 @@ export class AlbumCity extends React.Component {
   render() {
     window.scrollTo(0, 0);
     //TODO move to local state with cdm init?
-    let albums = this.props.galMap[this.props.city].map((album, index) => {
+    //Must render loading block here instead during gallerymap json fetching
+    let albums = this.props.galMap.body[this.props.city].map((album, index) => {
       return (
         <div className="album_flex__item" key={index}>
           <GalleryCover image={`/galleries/${album.id}/cover.jpg`} link={`/gallery/${album.id}/${this.props.city}`}
@@ -84,11 +85,17 @@ export class AlbumCity extends React.Component {
   }
 }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
   return {
     city: state.city,
     galMap: state.galMap
   };
 }
 
-export default connect(mapStateToProps)(AlbumCity);
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(cityActions, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AlbumCity);

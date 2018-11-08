@@ -20,7 +20,7 @@ class AlbumTwoCol extends React.Component {
   }
 
   render() {
-    let albums = this.props.galMap[this.props.city].map((album, index) => {
+    let albums = this.props.galMap.body[this.props.city].map((album, index) => {
       return (
         <GalleryCover image={`/galleries/${album.id}/cover.jpg`} link={`gallery/${album.id}/${this.props.city}`}
           id={album.id} key={album.id} qty={album.qty} icon={album.icon || this.setIcon()}
