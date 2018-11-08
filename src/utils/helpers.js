@@ -26,9 +26,9 @@ function handleDropdownToggle(target, action) {
   scrollToElement('#city-dropdown', {
     duration: 500
   });
-  if(action=="open") {
+  if(action==="open") {
     element.classList.add('active');
-  } else if (action=="close") {
+  } else if (action==="close") {
     element.classList.remove('active');
   } else {
     element.classList.toggle('active');

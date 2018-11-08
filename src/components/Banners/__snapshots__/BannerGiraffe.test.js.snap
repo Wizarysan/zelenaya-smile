@@ -1,0 +1,90 @@
+exports[`test renders correctly with test city 1`] = `
+<div
+  className="giraffe back-greygrad">
+  <a
+    href="http://testCity.zelenaya.net/mixer/">
+    <div
+      className="giraffe__wrapper">
+      <div
+        className="giraffe__title">
+        <span>
+          интернет и тв
+        </span>
+        <div
+          className="giraffe__title-big">
+          ОГРОМНЫХ
+        </div>
+        <span>
+          возможностей
+        </span>
+      </div>
+      <div
+        className="giraffe__body">
+        <img
+          className="giraffe__body-img"
+          src="giraffe-body.png" />
+      </div>
+      <div
+        className="giraffe__options">
+        <div
+          className="giraffe__option">
+          <img
+            className="giraffe__option-img"
+            src="giraffe-web.png" />
+          <div>
+            Интернет
+            <br />
+             тарифы до
+            <br />
+             100 Мбит/с
+          </div>
+        </div>
+        <div
+          className="giraffe__option">
+          <img
+            className="giraffe__option-img"
+            src="giraffe-tv.png" />
+          <div>
+            Цифровое ТВ
+            <br />
+            более 250
+            <br />
+             каналов
+          </div>
+        </div>
+        <br
+          className="giraffe__options-divider" />
+        <div
+          className="giraffe__option">
+          <img
+            className="giraffe__option-img"
+            src="giraffe-play.png" />
+          <div>
+            Бесплатное
+            <br />
+             управление
+            <br />
+             ТВ-эфиром
+          </div>
+        </div>
+        <div
+          className="giraffe__option">
+          <img
+            className="giraffe__option-img"
+            src="giraffe-mediac.png" />
+          <div>
+            Бесплатный
+            <br />
+             медиацентр
+            <br />
+            в комплекте
+          </div>
+        </div>
+      </div>
+      <img
+        className="giraffe__head"
+        src="giraffe-head.png" />
+    </div>
+  </a>
+</div>
+`;

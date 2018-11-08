@@ -9,13 +9,11 @@ import giraffeMediac from './../../assets/images/banners/giraffe-mediac.png';
 import giraffePlay from './../../assets/images/banners/giraffe-play.png';
 import './BannerGiraffe.scss';
 
-//TODO выбор города для линка в баннере
-
 const BannerGiraffeVertical = (props) => {
   return(
     <div className="giraffe-v">
       <div className="giraffe back-greygrad">
-        <a href="http://stavropol.zelenaya.net/mixer/" >
+        <a href={`http://${props.cityGW}.zelenaya.net/mixer/`} >
           <div className="giraffe__wrapper">
             <div className="giraffe__title">
               <span>интернет и тв</span>

@@ -1,0 +1,98 @@
+exports[`test renders correctly with test city 1`] = `
+<div
+  className="giraffe-v">
+  <div
+    className="giraffe back-greygrad">
+    <a
+      href="http://testCity.zelenaya.net/mixer/">
+      <div
+        className="giraffe__wrapper">
+        <div
+          className="giraffe__title">
+          <span>
+            интернет и тв
+          </span>
+          <div
+            className="giraffe__title-big">
+            ОГРОМНЫХ
+          </div>
+          <span>
+            возможностей
+          </span>
+        </div>
+        <div
+          className="giraffe__whole">
+          <img
+            className="giraffe__whole-img"
+            src="giraffe-whole.png" />
+        </div>
+        <div
+          className="giraffe__options">
+          <div
+            className="giraffe__option">
+            <img
+              className="giraffe__option-img"
+              src="giraffe-web.png" />
+            <div>
+              Интернет
+              <br
+                className="giraffe__option-br" />
+               тарифы до
+              <br
+                className="giraffe__option-br" />
+               100 Мбит/с
+            </div>
+          </div>
+          <div
+            className="giraffe__option">
+            <img
+              className="giraffe__option-img"
+              src="giraffe-tv.png" />
+            <div>
+              Цифровое ТВ
+              <br
+                className="giraffe__option-br" />
+               более 250
+              <br
+                className="giraffe__option-br" />
+               каналов
+            </div>
+          </div>
+          <br
+            className="giraffe__options-divider" />
+          <div
+            className="giraffe__option">
+            <img
+              className="giraffe__option-img"
+              src="giraffe-play.png" />
+            <div>
+              Бесплатное
+              <br
+                className="giraffe__option-br" />
+               управление
+              <br
+                className="giraffe__option-br" />
+               ТВ-эфиром
+            </div>
+          </div>
+          <div
+            className="giraffe__option">
+            <img
+              className="giraffe__option-img"
+              src="giraffe-mediac.png" />
+            <div>
+              Бесплатный
+              <br
+                className="giraffe__option-br" />
+               медиацентр 
+              <br
+                className="giraffe__option-br" />
+              в комплекте
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;

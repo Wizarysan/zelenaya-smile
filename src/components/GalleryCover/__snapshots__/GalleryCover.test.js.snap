@@ -1,0 +1,50 @@
+exports[`test renders correctly with test props 1`] = `
+<div
+  className="gallery_cover text-center">
+  <a
+    onClick={[Function]}
+    style={Object {}}>
+    <div
+      className="text-left gallery_cover__textwrap">
+      <div
+        className="js-play-sound"
+        onMouseEnter={[Function]}>
+        
+      </div>
+      <div
+        className="gallery_cover__hover photoshadow-grey">
+        <img
+          className="gallery_cover__image"
+          src="test.jpg" />
+        <div
+          className="gallery_cover__hover-green">
+          <div
+            className="gallery_cover__hover-photos center-both">
+            <div
+              className="gallery_cover__hover-digit" />
+            <div
+              className="gallery_cover__hover-text">
+              фото
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <span
+        className="gallery_cover__name">
+        test name
+        <svg
+          className="arrow_right"
+          viewBox="0 0 24 14.03">
+          <path
+            d="M579.32,1051.82a0.645,0.645,0,0,0,.894,0l6.6-6.4a0.605,0.605,0,0,0,0-.87l-6.6-6.4a0.645,0.645,0,0,0-.894,0,0.605,0.605,0,0,0,0,.87l5.554,5.38H563.631a0.615,0.615,0,1,0,0,1.23h21.184l-5.5,5.32A0.6,0.6,0,0,0,579.32,1051.82Z"
+            transform="translate(-563 -1037.97)" />
+        </svg>
+      </span>
+      <br />
+      <span
+        className="gallery_cover__date" />
+    </div>
+  </a>
+</div>
+`;

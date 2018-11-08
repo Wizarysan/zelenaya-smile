@@ -1,0 +1,5 @@
+exports[`test renders correctly with test ID and filename 1`] = `
+<img
+  className="gal_nav__photo__image img-responsive center-both"
+  src="/galleries/1/big/test.jpg" />
+`;

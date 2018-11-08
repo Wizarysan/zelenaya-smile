@@ -8,7 +8,7 @@ import './AlbumCity.scss';
 import ArrowCircle from './../../assets/svg/Arrow_circle';
 import GalleryCover from './../GalleryCover/GalleryCover';
 
-class AlbumCity extends React.Component {
+export class AlbumCity extends React.Component {
   constructor(props) {
     super(props);
   }

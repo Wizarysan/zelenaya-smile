@@ -10,8 +10,6 @@ import giraffeMediac from './../../assets/images/banners/giraffe-mediac.png';
 import giraffePlay from './../../assets/images/banners/giraffe-play.png';
 import './BannerGiraffe.scss';
 
-//TODO выбор города для линка в баннере
-
 const BannerGiraffe = (props) => {
   return(
     <div className="giraffe back-greygrad">

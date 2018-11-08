@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "",
   "dependencies": {
-    "enzyme": "^3.7.0",
     "react": "^16.6.1",
     "react-delay": "0.0.4",
     "react-dom": "^16.6.1",
@@ -31,6 +30,8 @@
     "css-loader": "0.26.1",
     "detect-port": "1.1.0",
     "dotenv": "2.0.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "3.16.1",
     "eslint-config-react-app": "^0.6.2",
     "eslint-loader": "1.6.0",
