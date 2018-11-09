@@ -10,18 +10,21 @@ export default function reducer(state = initialState.galMap, action) {
   switch (action.type) {
     case GET_GALMAP:
       return {
+        ...state,
         loading: true,
         error: false,
         body: state.body
       };
     case GET_GALMAP_SUCCESS:
       return {
+        ...state,
         loading: false,
         error: false,
         body: action.data
       };
     case GET_GALMAP_SUCCESS:
       return {
+        ...state,
         loading: false,
         error: true,
         body: state.body
@@ -59,7 +62,10 @@ export function fetchGalMap() {
       .then(res => res.json())
       .then(
         data => dispatch(getGalleryMapSuccess(data)),
-        err => dispatch(getGalleryMapError())
+        err => {
+          console.error(err)
+          dispatch(getGalleryMapError())
+        }
       )
   }
 }

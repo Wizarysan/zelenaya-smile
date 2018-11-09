@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 //Borrowed action to reduce duplicate code
 import * as cityActions from './../CitySwitch/CityDuck';
 
-import './AlbumCity.scss';
+import './AlbumCity.css';
 import ArrowCircle from './../../assets/svg/Arrow_circle';
 import GalleryCover from './../GalleryCover/GalleryCover';
 

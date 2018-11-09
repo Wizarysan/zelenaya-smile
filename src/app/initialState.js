@@ -6,7 +6,14 @@ export default {
     'Ставрополь': 'stavropol',
   },
   loadingGal: false,
-  //Photo quanty to reduce server requests
+  /*
+    Optimal way for user experience is to 
+    left initial galMap here, and update it 
+    alongside with every build 
+    from current galMap (public/galleryMap.json)
+    thus providing user preloaded galleries list 
+    and fetching fresh list in background
+  */
   galMap: {
     loading: false,
     error: false,

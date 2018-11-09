@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import {connect} from 'react-redux';
 
 import BannerGiraffe from './../components/Banners/BannerGiraffe'
@@ -21,7 +21,7 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
 
         <Socials />
 
@@ -51,7 +51,7 @@ class HomePage extends React.Component {
           </div>
         </div>
 
-      </div>
+      </Fragment>
     )
   }
 }

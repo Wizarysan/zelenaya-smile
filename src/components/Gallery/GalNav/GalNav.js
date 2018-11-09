@@ -1,3 +1,5 @@
+//NEEDS HARDCORE REFACTORING
+
 import React from 'react';
 import {Link, browserHistory} from 'react-router';
 import {connect} from 'react-redux';
@@ -166,7 +168,7 @@ class GalNav extends React.Component {
 
 function mapStateToProps(state, ownProps) {
   return {
-    currentId: state.activeGallery.activeGalleryId,
+    currentId: state.activeGallery.id,
     galleryBody: state.activeGallery.body,
     galMap: state.galMap,
   };

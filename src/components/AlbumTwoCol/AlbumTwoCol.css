@@ -1,0 +1,89 @@
+@media screen and (max-width: 767px) {
+  .mobile-hide {
+    display: none; }
+  .mobile-show {
+    display: initial; } }
+
+@media screen and (min-width: 768px) {
+  .mobile-hide {
+    display: initial; }
+  .mobile-show {
+    display: none; } }
+
+.animation__photo-enter {
+  filter: blur(2px) grayscale(100%); }
+
+.animation__photo-enter-active.animation__photo-enter {
+  filter: blur(0px) grayscale(0%);
+  transition: all 200ms ease-in; }
+
+.animation__photo-leave {
+  opacity: 1; }
+  .animation__photo-leave-active.animation__photo-leave {
+    opacity: 0.01;
+    transition: opacity 200ms ease-in; }
+
+@keyframes bump {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.6); }
+  100% {
+    transform: scale(1); } }
+
+.animation__bump {
+  animation: bump .5s ease-out; }
+
+.album_2col {
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-top: 100px; }
+  @media (max-width: 767px) {
+    .album_2col {
+      margin-top: 50px; } }
+  .album_2col__column {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 3%;
+    padding-right: 3%; }
+    @media (max-width: 767px) {
+      .album_2col__column {
+        width: 100%; } }
+    .album_2col__column.shifted {
+      margin-top: -40px; }
+      @media (max-width: 767px) {
+        .album_2col__column.shifted {
+          margin-top: 0; } }
+  .album_2col .column-left .gallery_cover__icon {
+    top: 32%;
+    left: -48px; }
+  .album_2col .column-right .gallery_cover__icon {
+    top: 32%;
+    right: -48px; }
+  .album_2col__wrap {
+    position: relative;
+    padding-bottom: 50px; }
+    .album_2col__wrap .more {
+      text-align: center;
+      position: relative;
+      height: 180px; }
+      .album_2col__wrap .more:hover .arrow_circle {
+        transform: rotate(180deg); }
+      .album_2col__wrap .more__circle {
+        background-color: #73bd4c;
+        padding: 25px;
+        border-radius: 100%;
+        display: inline-block;
+        z-index: 1; }
+      .album_2col__wrap .more__albums {
+        color: white; }
+      .album_2col__wrap .more__city {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 5vw;
+        z-index: 2;
+        color: rgba(0, 0, 0, 0.08); }
+        @media (max-width: 767px) {
+          .album_2col__wrap .more__city {
+            font-size: 12vw; } }

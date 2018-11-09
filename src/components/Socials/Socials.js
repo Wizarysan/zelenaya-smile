@@ -1,9 +1,7 @@
 import React from 'react';
-import {Link} from 'react-router';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
 
-import './Socials.css';
+import './Socials.scss';
 
 import SocVk from './../../assets/svg/Soc_vk.js'
 import SocOk from './../../assets/svg/Soc_ok.js'
@@ -53,7 +51,7 @@ class Socials extends React.Component {
   }
 }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
   return {
     city: state.city,
     socials: state.socials

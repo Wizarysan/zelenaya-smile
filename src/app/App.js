@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './App.css';
 
 import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -12,12 +12,25 @@ class App extends Component {
   }
 
   render() {
+    let galMapError = null;
+    if(this.props.error) {
+      galMapError = <div className="global-error">Произошла ошибка при загрузке списка галерей. 
+        Данные могут быть неактуальны. Пожалуйста, перезагрузите страницу</div>
+    }
+
     return (
       <div className="container-fluid no-pad">
+        {galMapError}
         {this.props.children}
       </div>
     );
   }
+}
+
+function mapStateToProps(state) {
+  return {
+    error: state.galMap.error
+  };
 }
 
 function mapDispatchToProps(dispatch) {
@@ -26,4 +39,4 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

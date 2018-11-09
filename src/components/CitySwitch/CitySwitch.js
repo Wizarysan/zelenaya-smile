@@ -1,10 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router';
 import { bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
 import {handleDropdownToggle} from './../../utils/helpers';
 import * as cityActions from './CityDuck'
-
 
 import './CitySwitch.scss';
 import IconBurger from './../../assets/svg/Burger.js'
