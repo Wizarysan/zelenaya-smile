@@ -1,18 +1,8 @@
 @import './../../styles/shared.scss';
 
-// @keyframes galleryThumb {
-//     from {
-//       opacity: 0;
-//       transform: translateX(15%);
-//     }
-//     to {
-//       opacity: 1;
-//       transform: translateX(0%);
-//     }
-// }
-
 .gallery{
   margin-top: 30px;
+  position: relative;
   &__title {
     font-size: 2.6em;
     margin-bottom: 0px;
