@@ -1,0 +1,92 @@
+@media screen and (max-width: 767px) {
+  .mobile-hide {
+    display: none; }
+  .mobile-show {
+    display: initial; } }
+
+@media screen and (min-width: 768px) {
+  .mobile-hide {
+    display: initial; }
+  .mobile-show {
+    display: none; } }
+
+.animation__photo-enter {
+  filter: blur(2px) grayscale(100%); }
+
+.animation__photo-enter-active.animation__photo-enter {
+  filter: blur(0px) grayscale(0%);
+  transition: all 200ms ease-in; }
+
+.animation__photo-leave {
+  opacity: 1; }
+  .animation__photo-leave-active.animation__photo-leave {
+    opacity: 0.01;
+    transition: opacity 200ms ease-in; }
+
+@keyframes bump {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.6); }
+  100% {
+    transform: scale(1); } }
+
+.animation__bump, .gallery_cover__icon:hover {
+  animation: bump .5s ease-out; }
+
+.gallery_cover {
+  position: relative; }
+  .gallery_cover__image {
+    max-width: 100%;
+    max-height: 560px; }
+  .gallery_cover__hover {
+    position: relative; }
+    .gallery_cover__hover-green {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(115, 189, 76, 0.8);
+      line-height: 0.9;
+      opacity: 0;
+      transition: opacity .3s; }
+      .gallery_cover__hover-green:hover {
+        opacity: 1; }
+    .gallery_cover__hover-photos {
+      color: white;
+      text-align: center; }
+    .gallery_cover__hover-digit {
+      font-size: 80px; }
+    .gallery_cover__hover-text {
+      font-size: 20px; }
+  .gallery_cover__textwrap {
+    position: relative;
+    display: inline-block;
+    max-width: 100%; }
+    .gallery_cover__textwrap:hover {
+      color: #73bd4c;
+      fill: #73bd4c; }
+  .gallery_cover__icon {
+    position: absolute;
+    z-index: 1;
+    width: 90px;
+    transition: all .5s;
+    transform: scale(0.4) skew(-30deg, 30deg);
+    opacity: 0; }
+    @media (max-width: 767px) {
+      .gallery_cover__icon {
+        display: none; } }
+    .gallery_cover__icon.active {
+      transform: scale(1) skew(0deg, 0deg);
+      opacity: 1; }
+  .gallery_cover__name {
+    vertical-align: middle;
+    font-size: 1.1rem;
+    transition: color .3s; }
+  .gallery_cover__date {
+    transition: color .3s; }
+  .gallery_cover .arrow_right {
+    display: inline-block;
+    transition: all .3s; }
+  .gallery_cover:hover .arrow_right {
+    transform: translateX(5px); }

@@ -2,12 +2,12 @@ import React from 'react';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
 import Delay from 'react-delay';
-import {loadGallery} from './GalleryDuck'
+import { bindActionCreators } from 'redux';
+import * as galleryActions from './GalleryDuck'
 import Thumb from './Thumb/Thumb.js';
 
 import Share from './../Share/Share';
 
-import './GalleryDuck.js';
 import './Gallery.scss';
 
 import ArrowLeft from './../../assets/svg/Arrow_left.js'
@@ -25,16 +25,16 @@ class Gallery extends React.Component {
 
 //TODO ПОЧТИ одинаковый функционал с GalNav - рефактор
   getGalleryTitle() {
-    return this.props.galMap[this.props.currentCity].find(item=>item.id==this.props.id).name
+    return this.props.galMap.body[this.props.currentCity].find(item=>item.id==this.props.id).name
   }
   //TODO слить в одну функцию получения из галереи чего угодно?
   getGalleryDate() {
-    return this.props.galMap[this.props.currentCity].find(item=>item.id==this.props.id).date
+    return this.props.galMap.body[this.props.currentCity].find(item=>item.id==this.props.id).date
   }
 
   componentWillMount() {
     if (this.props.currentId != this.props.id) {
-      this.props.dispatch(loadGallery(this.props.id));
+      this.props.actions.loadGallery(this.props.id);
     }
   }
 
@@ -44,20 +44,23 @@ class Gallery extends React.Component {
 
   render() {
 
-    window.onresize = function(event) {
-     Array.from(document.querySelectorAll('.gallery__body__thumb')).forEach((item)=> {
-       {/*Тут сдвигаем ряды фоток туда-сюда*/}
-     });
-    };
+   let images = this.getImages(),
+   firstImages, secondImages, restImages;
+   (images.length>30)? firstImages = images.slice(0, 30) : firstImages = images;
+   (images.length>100)? secondImages = images.slice(31, 100) : secondImages = images.slice(31);
+   (images.length>150)? restImages = images.slice(101) : restImages = null;
 
-    let images = this.getImages(),
-        firstImages, secondImages, restImages;
-    (images.length>30)? firstImages = images.slice(0, 30) : firstImages = images;
-    (images.length>100)? secondImages = images.slice(31, 100) : secondImages = images.slice(31);
-    (images.length>150)? restImages = images.slice(101) : restImages = null;
+    let message;
+    if(this.props.loading) {
+      message = <div className="gallery__message">Загрузка...</div>
+    } else if(this.props.error) {
+      message = <div className="gallery__message">Ошибка при загрузке галереи, попробуйте перезагрузить страницу.</div>
+    } else {
+      message = null;
+    }
 
     return (
-      <div className="gallery">
+      <div className="gallery">        
         <h1 className="gallery__title text-center">{this.getGalleryTitle()}</h1>
         <div className="gallery__date text-center">{this.getGalleryDate()}</div>
         <div className="gallery__share" style={{backgroundImage: `url(${like_pattern})`}}>
@@ -85,6 +88,7 @@ class Gallery extends React.Component {
             </div>
           </div>
           <div className="gallery__body">
+            {message}
             {firstImages}
             <Delay wait={1000}>
               <span>
@@ -112,12 +116,21 @@ class Gallery extends React.Component {
   }
 }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
   return {
-    currentId: state.activeGallery.activeGalleryId,
+    currentId: state.activeGallery.id,
+    loading: state.activeGallery.loading, 
+    error: state.activeGallery.error, 
     galBody: state.activeGallery.body,
     galMap: state.galMap,
   };
 }
 
-export default connect(mapStateToProps)(Gallery);
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(galleryActions, dispatch)
+  }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Gallery);

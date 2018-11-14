@@ -1,53 +1,61 @@
 import initialState from './../../app/initialState';
-import { combineReducers } from "redux";
 
 //Actions
-const CHANGE_ID = 'app/Gallery/CHANGE_ID';
-const RECEIVE = 'app/Gallery/RECEIVE';
+const GALLERY_REQUEST = 'app/Gallery/GALLERY_REQUEST';
+const GALLERY_SUCCESS = 'app/Gallery/GALLERY_SUCCESS';
+const GALLERY_ERROR = 'app/Gallery/GALLERY_ERROR';
 
 //Reducer
-function activeGalleryId(state = initialState.activeGallery.id, action) {
+export default function reducer (state = initialState.activeGallery, action) {
   switch (action.type) {
-    case 'app/Gallery/CHANGE_ID':
-      return action.payload;
+    case 'app/Gallery/GALLERY_REQUEST':
+      return {
+        ...state,
+        id: action.payload,
+        loading: true,
+        error: false
+      };
+    case 'app/Gallery/GALLERY_SUCCESS':
+      return {
+        ...state,
+        body: action.payload,
+        loading: false,
+        error: false
+      };
+    case 'app/Gallery/GALLERY_ERROR':
+      return {
+        ...state,
+        loading: false,
+        error: true
+      };
     default:
       return state;
   }
 }
-
-function activeGallery(state = initialState.activeGallery.body, action) {
-  switch (action.type) {
-    case 'app/Gallery/RECEIVE':
-      return action.payload;
-    default:
-      return state;
-  }
-}
-
-const reducer = combineReducers( {
-    activeGalleryId,
-    body: activeGallery,
-} );
-
-export default reducer;
 
 //Action Creators
 export function requestGallery(id) {
   return {
-    type: CHANGE_ID,
+    type: GALLERY_REQUEST,
     payload: id
   }
 }
 
-export function receiveGallery(id, body) {
+export function receiveGallerySuccess(body) {
   return {
-    type: RECEIVE,
+    type: GALLERY_SUCCESS,
     payload: body
   }
 }
 
+export function receiveGalleryError(err) {
+  return {
+    type: GALLERY_ERROR
+  }
+}
+
 export function loadGallery(id) {
-  return function (dispatch) {
+  return (dispatch) => {
     dispatch(requestGallery(id))
     let galData = {id:id};
     let fd = new FormData();
@@ -55,29 +63,18 @@ export function loadGallery(id) {
        fd.append(i,galData[i]);
     }
     return fetch('/getGallery.php',
-      {method: "POST",
-      body: fd,
-      mode: "cors"
+      {
+        method: "POST",
+        body: fd,
+        mode: "cors"
       })
-    //.then(response => console.log(response))
-    .then(response => response.json())
-    .then(data => {
-      dispatch(receiveGallery(id, data))
-    })
-    //TODO обработка ошибки
-    .catch(alert);
+    .then(res => res.json())
+    .then(
+      data => dispatch(receiveGallerySuccess(data)),
+      err => {
+        console.error(err)
+        dispatch(receiveGalleryError(err))
+      }
+    )
   }
 }
-
-// export function loadGallery(id) {
-//   return function (dispatch) {
-//     dispatch(requestGallery(id))
-//     return dispatch(receiveGallery(id, [
-//       '3a54c2ad3b86437c0ffb985969eb93e2.jpg',
-//       '0e5119763afb9a53cd87fcea413431c4.jpg',
-//       '4d32f45a8b78fc9776b4fdb5b580b616.jpg',
-//       '4cfd439256cab895100dfefc0a0f0b43.jpg',
-//       ]
-//     ))
-//   }
-// }

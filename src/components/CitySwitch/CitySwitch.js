@@ -1,10 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router';
 import { bindActionCreators } from 'redux';
 import {connect} from 'react-redux';
 import {handleDropdownToggle} from './../../utils/helpers';
 import * as cityActions from './CityDuck'
-
 
 import './CitySwitch.scss';
 import IconBurger from './../../assets/svg/Burger.js'
@@ -16,7 +14,7 @@ class CitySwitch extends React.Component {
 
   componentWillMount(){
     let initialCity = decodeURI(location.href.substr(location.href.lastIndexOf('/') + 1));
-    if((initialCity != this.props.city) && this.props.galMap.hasOwnProperty(initialCity)) {
+    if((initialCity != this.props.city) && this.props.galMap.body.hasOwnProperty(initialCity)) {
       this.handleCityChange(initialCity)
     }
   }
@@ -34,7 +32,7 @@ class CitySwitch extends React.Component {
   }
 }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
   return {
     city: state.city,
     galMap: state.galMap

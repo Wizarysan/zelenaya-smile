@@ -1,8 +1,6 @@
-import React, {PropTypes} from 'react';
-import {Link} from 'react-router';
+import React from 'react';
 
 import GalNav from './../components/Gallery/GalNav/GalNav'
-import GalImage from './../components/Gallery/GalImage/GalImage'
 import BannerGiraffeVertical from './../components/Banners/BannerGiraffeVertical'
 
 import {cityGWName} from './../utils/helpers';

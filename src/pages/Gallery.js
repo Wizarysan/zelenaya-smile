@@ -1,5 +1,4 @@
-import React, {PropTypes} from 'react';
-import {Link} from 'react-router';
+import React, {Fragment} from 'react';
 
 import NavTop from './../components/NavTop/NavTop'
 import Socials from './../components/Socials/Socials'
@@ -10,13 +9,15 @@ class GalleryPage extends React.Component {
   render() {
     window.scrollTo(0, 0);
     return (
-      <div>
+      <Fragment>
+        
         <Socials />
         {/*<NavTop />*/}
         <div className="row">
           <Gallery id={+this.props.params.id} currentCity={this.props.params.cityName}/>
         </div>
-      </div>
+
+      </Fragment>
     )
   }
 }

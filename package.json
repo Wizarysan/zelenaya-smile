@@ -67,8 +67,9 @@
   },
   "scripts": {
     "build-css": "node-sass src/ -o src/",
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "start-js": "node scripts/start.js",
-    "start": "set PORT=3006 && npm-run-all -p start-js",
+    "start": "set PORT=3006 && npm-run-all -p watch-css start-js",
     "build": "npm run build-css && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },

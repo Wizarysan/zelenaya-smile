@@ -1,3 +1,5 @@
+//NEEDS HARDCORE REFACTORING
+
 import React from 'react';
 import {Link, browserHistory} from 'react-router';
 import {connect} from 'react-redux';
@@ -30,7 +32,7 @@ class GalNav extends React.Component {
   }
 
   getGalleryTitle() {
-    return this.props.galMap[this.props.currentCity].find(item=>item.id==this.props.galleryId).name;
+    return this.props.galMap.body[this.props.currentCity].find(item=>item.id==this.props.galleryId).name;
   }
 
   componentWillMount() {
@@ -166,7 +168,7 @@ class GalNav extends React.Component {
 
 function mapStateToProps(state, ownProps) {
   return {
-    currentId: state.activeGallery.activeGalleryId,
+    currentId: state.activeGallery.id,
     galleryBody: state.activeGallery.body,
     galMap: state.galMap,
   };
