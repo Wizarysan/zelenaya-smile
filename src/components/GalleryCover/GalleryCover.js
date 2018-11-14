@@ -36,28 +36,20 @@ class GalleryCover extends React.Component {
     switch(icon) {
       case 'ghost':
         return <AlbumGhost/>;
-      break;
       case 'sword':
         return <AlbumSword/>;
-      break;
       case 'lips':
         return <AlbumLips/>;
-      break;
       case 'cherry':
         return <AlbumCherry/>;
-      break;
       case 'guitar':
         return <AlbumGuitar/>;
-      break;
       case 'kitty':
         return <AlbumKitty/>;
-      break;
       case 'heart':
         return <AlbumHeart/>;
-      break;
       default:
         return '';
-      break;
     }
   }
 

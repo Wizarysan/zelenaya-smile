@@ -23,7 +23,7 @@ class CityMapBody extends React.Component {
     return (
       <div className="map text-center">
         <div className="map__body">
-          <img src={mapBack} className="map__body__image"/>
+          <img src={mapBack} className="map__body__image" alt=""/>
           <span className="map__body__caption horizontal-center">16 городов России</span>
           <Link to={'/city/Ставрополь'}>
             <div className="map__body__pin" id="pin-stavropol" data-target="#list-stavropol" onClick={()=>this.handleCityChange('Ставрополь')}>
