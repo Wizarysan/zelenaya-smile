@@ -11,9 +11,6 @@ import Footer from './../components/Footer/Footer'
 import {cityGWName} from './../utils/helpers';
 
 class HomePage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     document.title='Улыбнись :) - Зелёная точка';

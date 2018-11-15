@@ -8,13 +8,10 @@ import './CitySwitch.css';
 import IconBurger from './../../assets/svg/Burger.js'
 
 class CitySwitch extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentWillMount(){
     let initialCity = decodeURI(location.href.substr(location.href.lastIndexOf('/') + 1));
-    if((initialCity != this.props.city) && this.props.galMap.body.hasOwnProperty(initialCity)) {
+    if((initialCity !== this.props.city) && this.props.galMap.body.hasOwnProperty(initialCity)) {
       this.handleCityChange(initialCity)
     }
   }

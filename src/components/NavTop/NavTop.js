@@ -5,7 +5,6 @@ import './NavTop.css';
 import CitySwitch from './../CitySwitch/CitySwitch';
 import CityList from './../CityMap/CityList';
 
-import logo_main from './../../assets/images/logo_main.png';
 import LogoSmile from './../../assets/svg/Logo_smile';
 import LogoMain from './../../assets/svg/Logo_main';
 

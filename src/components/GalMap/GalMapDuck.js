@@ -22,7 +22,7 @@ export default function reducer(state = initialState.galMap, action) {
         error: false,
         body: action.data
       };
-    case GET_GALMAP_SUCCESS:
+    case GET_GALMAP_ERROR:
       return {
         ...state,
         loading: false,

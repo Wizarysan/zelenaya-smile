@@ -21,24 +21,24 @@ const BannerGiraffeVertical = (props) => {
               <span>возможностей</span>
             </div>
             <div className="giraffe__whole">
-              <img src={giraffeWhole} className="giraffe__whole-img"/>
+              <img src={giraffeWhole} className="giraffe__whole-img" alt=""/>
             </div>
             <div className="giraffe__options">
               <div className="giraffe__option">
-                <img src={giraffeWeb} className="giraffe__option-img"/>
+                <img src={giraffeWeb} className="giraffe__option-img" alt=""/>
                 <div>Интернет<br className="giraffe__option-br"/> тарифы до<br className="giraffe__option-br"/> 100 Мбит/с</div>
               </div>
               <div className="giraffe__option">
-                <img src={giraffeTv} className="giraffe__option-img"/>
+                <img src={giraffeTv} className="giraffe__option-img" alt=""/>
                 <div>Цифровое ТВ<br className="giraffe__option-br"/> более 250<br className="giraffe__option-br"/> каналов</div>
               </div>
               <br className="giraffe__options-divider"/>
               <div className="giraffe__option">
-                <img src={giraffePlay} className="giraffe__option-img"/>
+                <img src={giraffePlay} className="giraffe__option-img" alt=""/>
                 <div>Бесплатное<br className="giraffe__option-br"/> управление<br className="giraffe__option-br"/> ТВ-эфиром</div>
               </div>
               <div className="giraffe__option">
-                <img src={giraffeMediac} className="giraffe__option-img"/>
+                <img src={giraffeMediac} className="giraffe__option-img" alt=""/>
                 <div>Бесплатный<br className="giraffe__option-br"/> медиацентр <br className="giraffe__option-br"/>в комплекте</div>
               </div>
             </div>

@@ -18,12 +18,11 @@ class CityList extends React.Component {
     hoverTargetActive(document.querySelectorAll('.map__list-item'));
   }
 
-
+  /*TODO Рефактор в цикл*/
   render() {
-    {/*TODO Рефактор в цикл*/}
     return(
       <div className="map__list" >
-        {(this.props.type == 'map') && <MapIcon />}
+        {(this.props.type === 'map') && <MapIcon />}
         <p className="map__list-title">Фотографии в других городах</p>
         <div className="row">
           <div className="col-xs-6 col-sm-3">

@@ -10,12 +10,9 @@ import ArrowCircle from './../../assets/svg/Arrow_circle';
 import GalleryCover from './../GalleryCover/GalleryCover';
 
 export class AlbumCity extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentWillMount() {
-    if (this.props.city != this.props.targetCity) {
+    if (this.props.city !== this.props.targetCity) {
       this.props.actions.setCity(this.props.targetCity);
     }
   }

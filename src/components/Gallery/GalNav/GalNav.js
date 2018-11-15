@@ -32,7 +32,7 @@ class GalNav extends React.Component {
   }
 
   getGalleryTitle() {
-    return this.props.galMap.body[this.props.currentCity].find(item=>item.id==this.props.galleryId).name;
+    return this.props.galMap.body[this.props.currentCity].find(item=>item.id===this.props.galleryId).name;
   }
 
   componentWillMount() {
@@ -76,11 +76,11 @@ class GalNav extends React.Component {
         prevImageIndex;
 
     if (gallBody.length > 1) {
-      if(currentImageIndex == 0) {
+      if(currentImageIndex === 0) {
         nextImageIndex = gallBody[currentImageIndex+1];
         prevImageIndex = gallBody[gallBody.length-1];
       }
-      else if(currentImageIndex == gallBody.length-1) {
+      else if(currentImageIndex === gallBody.length-1) {
         nextImageIndex = gallBody[0];
         prevImageIndex = gallBody[currentImageIndex-1];
       }

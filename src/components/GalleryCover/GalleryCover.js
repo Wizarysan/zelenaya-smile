@@ -62,7 +62,7 @@ class GalleryCover extends React.Component {
               {this.chooseCoverIcon(this.props.icon)}
             </div>
             <div className="gallery_cover__hover photoshadow-grey">
-              <img src={this.props.image} className="gallery_cover__image" />
+              <img src={this.props.image} className="gallery_cover__image" alt=""/>
               <div className="gallery_cover__hover-green">
                 <div className="gallery_cover__hover-photos center-both">
                   <div className="gallery_cover__hover-digit">{this.props.qty}</div>
