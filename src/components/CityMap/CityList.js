@@ -6,7 +6,7 @@ import {hoverTargetActive, handleDropdownToggle} from './../../utils/helpers';
 import * as cityActions from './../CitySwitch/CityDuck';
 
 import MapIcon from './../../assets/svg/Map_icon.js';
-import './CityMap.scss';
+import './CityMap.css';
 
 class CityList extends React.Component {
 

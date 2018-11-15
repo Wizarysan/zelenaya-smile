@@ -8,7 +8,7 @@ import Thumb from './Thumb/Thumb.js';
 
 import Share from './../Share/Share';
 
-import './Gallery.scss';
+import './Gallery.css';
 
 import ArrowLeft from './../../assets/svg/Arrow_left.js'
 import like_pattern from './../../assets/images/like-pattern.jpg'

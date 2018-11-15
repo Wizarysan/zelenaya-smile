@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
 
-import './AlbumTwoCol.scss';
+import './AlbumTwoCol.css';
 import ArrowCircle from './../../assets/svg/Arrow_circle';
 import GalleryCover from './../GalleryCover/GalleryCover';
 

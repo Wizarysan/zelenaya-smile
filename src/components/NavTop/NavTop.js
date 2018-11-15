@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import './NavTop.scss';
+import './NavTop.css';
 
 import CitySwitch from './../CitySwitch/CitySwitch';
 import CityList from './../CityMap/CityList';

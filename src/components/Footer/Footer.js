@@ -1,7 +1,7 @@
 import React from 'react';
 import LogoMain from './../../assets/svg/Logo_main';
 import Socials from './../../components/Socials/Socials';
-import './Footer.scss';
+import './Footer.css';
 
 const Footer = (props) => {
   return(

@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import './Socials.scss';
+import './Socials.css';
 
 import SocVk from './../../assets/svg/Soc_vk.js'
 import SocOk from './../../assets/svg/Soc_ok.js'

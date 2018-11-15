@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {handleDropdownToggle} from './../../utils/helpers';
 import * as cityActions from './CityDuck'
 
-import './CitySwitch.scss';
+import './CitySwitch.css';
 import IconBurger from './../../assets/svg/Burger.js'
 
 class CitySwitch extends React.Component {

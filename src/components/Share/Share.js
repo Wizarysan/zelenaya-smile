@@ -1,6 +1,6 @@
 import React from 'react';
 import {Helmet} from "react-helmet";
-import './Share.scss';
+import './Share.css';
 import {
   ShareButtons,
   ShareCounts,

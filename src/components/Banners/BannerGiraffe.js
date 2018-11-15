@@ -8,7 +8,7 @@ import giraffeWeb from './../../assets/images/banners/giraffe-web.png';
 import giraffeTv from './../../assets/images/banners/giraffe-tv.png';
 import giraffeMediac from './../../assets/images/banners/giraffe-mediac.png';
 import giraffePlay from './../../assets/images/banners/giraffe-play.png';
-import './BannerGiraffe.scss';
+import './BannerGiraffe.css';
 
 const BannerGiraffe = (props) => {
   return(

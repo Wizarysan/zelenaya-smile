@@ -7,7 +7,7 @@ import * as cityActions from './../CitySwitch/CityDuck';
 import Pin from './Pin/Pin';
 
 import mapBack from './../../assets/images/map_back.png';
-import './CityMap.scss';
+import './CityMap.css';
 
 class CityMapBody extends React.Component {
 

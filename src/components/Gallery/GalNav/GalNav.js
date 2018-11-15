@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {CSSTransitionGroup} from 'react-transition-group';
 import Swipeable from 'react-swipeable';
 import {loadGallery} from './../GalleryDuck';
-import './GalNav.scss';
+import './GalNav.css';
 
 import Share from './../../Share/Share';
 import GalImage from './../GalImage/GalImage';

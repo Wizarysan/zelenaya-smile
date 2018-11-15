@@ -1,5 +1,5 @@
 import React from 'react';
-import './Pin.scss';
+import './Pin.css';
 
 import PinIcon from './../../../assets/svg/Pin_icon.js'
 

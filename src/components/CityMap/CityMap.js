@@ -1,7 +1,7 @@
 import React from 'react';
 import CityList from './CityList'
 import CityMapBody from './CityMapBody'
-import './CityMap.scss';
+import './CityMap.css';
 
 const CityMap = (props) => {
     return (

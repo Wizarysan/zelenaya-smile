@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import ScrollReveal from 'scrollreveal';
-import './GalleryCover.scss';
+import './GalleryCover.css';
 
 import ArrowRight from './../../assets/svg/Arrow_right.js'
 import AlbumGhost from './../../assets/svg/Album_ghost.js'
