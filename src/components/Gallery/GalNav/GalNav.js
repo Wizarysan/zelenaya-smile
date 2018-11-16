@@ -1,11 +1,11 @@
 //NEEDS HARDCORE REFACTORING
 
 import React from 'react';
-import {Link, browserHistory} from 'react-router';
+import {Link} from 'react-router';
 import {connect} from 'react-redux';
 import {CSSTransitionGroup} from 'react-transition-group';
 import Swipeable from 'react-swipeable';
-import {loadGallery} from './../GalleryDuck';
+import * as galleryActions from './../GalleryDuck';
 import './GalNav.css';
 
 import Share from './../../Share/Share';
@@ -20,15 +20,7 @@ class GalNav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {single:false};
-    this.zoom = this.zoom.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-  }
-
-  handleKeyPress(e) {
-    console.log(e.keyCode)
-    // if(e.keyCode == '27') {
-    //     browserHistory.push('/gallery/'+this.props.currentId);
-    //  }
+    this.zoom = this.zoom.bind(this);    
   }
 
   getGalleryTitle() {
@@ -36,20 +28,9 @@ class GalNav extends React.Component {
   }
 
   componentWillMount() {
-    //if (this.props.currentId != +this.props.galleryId) {
-      this.props.dispatch(loadGallery(this.props.galleryId));
-    //}
+    this.props.actions.loadGallery(this.props.galleryId);
     document.title = this.getGalleryTitle();
   }
-
-  // photoPageHandler = function(e) {
-  //   if(e.keyCode == '37') {
-  //     browserHistory.push('/image/'+this.props.currentId+'/'+prevImageIndex);
-  //   }
-  //   if(e.keyCode == '39') {
-  //     browserHistory.push('/image/'+this.props.currentId+'/'+nextImageIndex);
-  //   }
-  // }
 
   swipedRight(){
     document.getElementById('js-prev-image').click();
@@ -69,7 +50,7 @@ class GalNav extends React.Component {
   render() {
     const gallBody = this.props.galleryBody,
           currentId = this.props.currentId,
-          currentImageIndex = gallBody.findIndex((element, index)=> {
+          currentImageIndex = gallBody.findIndex((element)=> {
             return element == this.props.image;
           });
     let nextImageIndex,
@@ -102,22 +83,12 @@ class GalNav extends React.Component {
         onSwipedRight={this.swipedRight}
         onSwipedLeft={this.swipedLeft}
          >
-        <div className="gal_nav single-full" onKeyDown={this.handleKeyPress}>
+        <div className="gal_nav single-full">
           <div className="row single-hidden">
             <div className="col-xs-12 text-center">
               <span className="gal_nav__title">
                 {this.getGalleryTitle()}
               </span>
-            </div>
-            <div className="col-xs-2">
-              {/*
-              <div className="gal_nav__close pull-right">
-                <Link to={'/gallery/'+this.props.currentId}>
-                  <span className="gal_nav__esc">Esc</span>
-                  <CrossIcon />
-                </Link>
-              </div>
-              */}
             </div>
           </div>
           <div className="row gal_nav__secondary single-hidden">
@@ -137,7 +108,6 @@ class GalNav extends React.Component {
               <Share size={32} image={location.protocol + '//' + location.host + process.env.PUBLIC_URL+"/galleries/"+this.props.currentId+"/big/"+this.props.image}
                 />
             </div>
-
           </div>
           <div className="row gal_nav__equal">
             <div className="col-xs-1 no-pad single-hidden">
@@ -176,7 +146,8 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
   return {
+    actions: bindActionCreators(galleryActions, dispatch)
   }
 }
 
-export default connect(mapStateToProps)(GalNav);
+export default connect(mapStateToProps, mapDispatchToProps)(GalNav);
